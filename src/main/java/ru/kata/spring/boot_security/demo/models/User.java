@@ -40,7 +40,7 @@ public class User implements UserDetails {
 
     @Column(name = "username")
     @NotEmpty(message = "Username should not be empty")
-    private String userName;
+    private String username;
 
     @Column(name = "password")
     private String password;
@@ -54,12 +54,12 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String name, String lastName, int age, String mail, String userName, String password) {
+    public User(String name, String lastName, int age, String mail, String username, String password) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.mail = mail;
-        this.userName = userName;
+        this.username = username;
         this.password = password;
     }
 
@@ -105,11 +105,11 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     @Override
